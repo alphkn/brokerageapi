@@ -153,7 +153,8 @@ public class AuthenticationService {
      * @param customerId  the ID of the customer to check access for
      */
     public void checkCustomerAccess(UserDetails userDetails, Long customerId) {
-        if (!userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ADMIN"))) {
+        User user = (User)userDetails;
+        if (!user.getRoles().contains("ADMIN")) {
             String username = userDetails.getUsername();
             Long requesterCustId = userRepository.findByUsername(username)
                     .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username)).getCustomer().getId();
