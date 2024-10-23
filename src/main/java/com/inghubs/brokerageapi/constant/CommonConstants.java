@@ -23,4 +23,6 @@ public class CommonConstants {
     public static final String CUSTOMER_NOT_FOUND_OR_NOT_ENABLED = "Customer not found or not ENABLED"; // Customer status error
     public static final String PRICE = "price"; // Key for price
     public static final String CREATE_DATE = "createDate"; // Key for creation date
+    public static final String INTERNAL_SERVER_ERROR = "Internal Server Error";
+    public static final String UNAUTHORIZED_ACCESS = "Unauthorized access";
 }

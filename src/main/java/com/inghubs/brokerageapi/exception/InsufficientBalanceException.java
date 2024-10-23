@@ -1,6 +1,10 @@
 package com.inghubs.brokerageapi.exception;
 
+import com.inghubs.brokerageapi.constant.CommonConstants;
+
+
 public class InsufficientBalanceException extends RuntimeException {
+
     // Constructor with a message
     public InsufficientBalanceException(String message) {
         super(message);
@@ -8,7 +12,7 @@ public class InsufficientBalanceException extends RuntimeException {
 
     // Default constructor
     public InsufficientBalanceException() {
-        super("Insufficient balance");
+        super(CommonConstants.INSUFFICIENT_BALANCE);
     }
 
     // Constructor with a message and cause

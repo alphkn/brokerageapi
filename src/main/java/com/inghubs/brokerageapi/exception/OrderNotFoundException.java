@@ -1,6 +1,10 @@
 package com.inghubs.brokerageapi.exception;
 
+import com.inghubs.brokerageapi.constant.CommonConstants;
+
+
 public class OrderNotFoundException extends RuntimeException {
+
     // Constructor with a message
     public OrderNotFoundException(String message) {
         super(message);
@@ -8,7 +12,7 @@ public class OrderNotFoundException extends RuntimeException {
 
     // Default constructor
     public OrderNotFoundException() {
-        super("Order not found");
+        super(CommonConstants.ORDER_NOT_FOUND);
     }
 
     // Constructor with a message and cause
