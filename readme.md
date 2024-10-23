@@ -89,7 +89,7 @@ To start using the API, you can send requests to the local server endpoints prov
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/brokerageapi.git
-   cd brokerage-firm-api
+   cd brokerageapi
    ```
 
 2. Build the project using Maven:
