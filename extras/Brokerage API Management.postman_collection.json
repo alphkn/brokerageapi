@@ -1,0 +1,760 @@
+{
+	"info": {
+		"_postman_id": "788b7310-2be8-47c5-b53e-f4d259a8cad3",
+		"name": "Brokerage API Management",
+		"description": "This is OpenAPI UI environment generated for the Brokerage API specification\n\nContact Support:\n Name: Brokerage\n Email: info@brokerage.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10261392"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "Listing Transactions endpoint",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/transactions?customerId=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "customerId",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/transactions?customerId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transactions"
+											],
+											"query": [
+												{
+													"key": "customerId",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"amount\": \"<number>\",\n    \"timestamp\": \"<dateTime>\",\n    \"type\": \"WITHDRAWAL\",\n    \"id\": \"<long>\",\n    \"customer\": {\n      \"id\": \"<long>\",\n      \"user\": {\n        \"id\": \"<long>\",\n        \"username\": \"<string>\",\n        \"roles\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"enabled\": \"<boolean>\",\n        \"authorities\": [\n          {\n            \"authority\": \"<string>\"\n          },\n          {\n            \"authority\": \"<string>\"\n          }\n        ],\n        \"accountNonExpired\": \"<boolean>\",\n        \"credentialsNonExpired\": \"<boolean>\",\n        \"accountNonLocked\": \"<boolean>\"\n      },\n      \"assets\": [\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"GARAN\",\n          \"size\": \"<number>\",\n          \"usableSize\": \"<number>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"ING\",\n          \"size\": \"<number>\",\n          \"usableSize\": \"<number>\"\n        }\n      ],\n      \"tradeOrders\": [\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"GARAN\",\n          \"orderSide\": \"SELL\",\n          \"size\": \"<number>\",\n          \"price\": \"<number>\",\n          \"status\": \"FILLED\",\n          \"createDate\": \"<dateTime>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"TRY\",\n          \"orderSide\": \"BUY\",\n          \"size\": \"<number>\",\n          \"price\": \"<number>\",\n          \"status\": \"PARTIALLY_FILLED\",\n          \"createDate\": \"<dateTime>\"\n        }\n      ],\n      \"enabled\": \"<boolean>\"\n    },\n    \"iban\": \"<string>\",\n    \"processed\": \"<boolean>\"\n  },\n  {\n    \"amount\": \"<number>\",\n    \"timestamp\": \"<dateTime>\",\n    \"type\": \"WITHDRAWAL\",\n    \"id\": \"<long>\",\n    \"customer\": {\n      \"id\": \"<long>\",\n      \"user\": {\n        \"id\": \"<long>\",\n        \"username\": \"<string>\",\n        \"roles\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"enabled\": \"<boolean>\",\n        \"authorities\": [\n          {\n            \"authority\": \"<string>\"\n          },\n          {\n            \"authority\": \"<string>\"\n          }\n        ],\n        \"accountNonExpired\": \"<boolean>\",\n        \"credentialsNonExpired\": \"<boolean>\",\n        \"accountNonLocked\": \"<boolean>\"\n      },\n      \"assets\": [\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"TRY\",\n          \"size\": \"<number>\",\n          \"usableSize\": \"<number>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"SASA\",\n          \"size\": \"<number>\",\n          \"usableSize\": \"<number>\"\n        }\n      ],\n      \"tradeOrders\": [\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"SASA\",\n          \"orderSide\": \"BUY\",\n          \"size\": \"<number>\",\n          \"price\": \"<number>\",\n          \"status\": \"FILLED\",\n          \"createDate\": \"<dateTime>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"customer\": {\n            \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n          },\n          \"assetCode\": \"SASA\",\n          \"orderSide\": \"SELL\",\n          \"size\": \"<number>\",\n          \"price\": \"<number>\",\n          \"status\": \"PENDING\",\n          \"createDate\": \"<dateTime>\"\n        }\n      ],\n      \"enabled\": \"<boolean>\"\n    },\n    \"iban\": \"<string>\",\n    \"processed\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Deposit or Withdraw Money endpoint",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": \"<number>\",\n  \"timestamp\": \"<dateTime>\",\n  \"type\": \"WITHDRAWAL\",\n  \"id\": \"<long>\",\n  \"customer\": {\n    \"id\": \"<long>\",\n    \"user\": {\n      \"id\": \"<long>\",\n      \"username\": \"<string>\",\n      \"roles\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"customer\": {\n        \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n      },\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"accountNonExpired\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonLocked\": \"<boolean>\"\n    },\n    \"assets\": [\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"ING\",\n        \"size\": \"<number>\",\n        \"usableSize\": \"<number>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"SASA\",\n        \"size\": \"<number>\",\n        \"usableSize\": \"<number>\"\n      }\n    ],\n    \"tradeOrders\": [\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"GARAN\",\n        \"orderSide\": \"BUY\",\n        \"size\": \"<number>\",\n        \"price\": \"<number>\",\n        \"status\": \"CANCELED\",\n        \"createDate\": \"<dateTime>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"ING\",\n        \"orderSide\": \"SELL\",\n        \"size\": \"<number>\",\n        \"price\": \"<number>\",\n        \"status\": \"FILLED\",\n        \"createDate\": \"<dateTime>\"\n      }\n    ],\n    \"enabled\": \"<boolean>\"\n  },\n  \"iban\": \"<string>\",\n  \"processed\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/transactions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": \"<number>\",\n  \"timestamp\": \"<dateTime>\",\n  \"type\": \"WITHDRAWAL\",\n  \"id\": \"<long>\",\n  \"customer\": {\n    \"id\": \"<long>\",\n    \"user\": {\n      \"id\": \"<long>\",\n      \"username\": \"<string>\",\n      \"roles\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"customer\": {\n        \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n      },\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"accountNonExpired\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonLocked\": \"<boolean>\"\n    },\n    \"assets\": [\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"ING\",\n        \"size\": \"<number>\",\n        \"usableSize\": \"<number>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"SASA\",\n        \"size\": \"<number>\",\n        \"usableSize\": \"<number>\"\n      }\n    ],\n    \"tradeOrders\": [\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"GARAN\",\n        \"orderSide\": \"BUY\",\n        \"size\": \"<number>\",\n        \"price\": \"<number>\",\n        \"status\": \"CANCELED\",\n        \"createDate\": \"<dateTime>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"ING\",\n        \"orderSide\": \"SELL\",\n        \"size\": \"<number>\",\n        \"price\": \"<number>\",\n        \"status\": \"FILLED\",\n        \"createDate\": \"<dateTime>\"\n      }\n    ],\n    \"enabled\": \"<boolean>\"\n  },\n  \"iban\": \"<string>\",\n  \"processed\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/transactions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transactions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"amount\": \"<number>\",\n  \"timestamp\": \"<dateTime>\",\n  \"type\": \"WITHDRAWAL\",\n  \"id\": \"<long>\",\n  \"customer\": {\n    \"id\": \"<long>\",\n    \"user\": {\n      \"id\": \"<long>\",\n      \"username\": \"<string>\",\n      \"roles\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"customer\": {\n        \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n      },\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"accountNonExpired\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonLocked\": \"<boolean>\"\n    },\n    \"assets\": [\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"ING\",\n        \"size\": \"<number>\",\n        \"usableSize\": \"<number>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"SASA\",\n        \"size\": \"<number>\",\n        \"usableSize\": \"<number>\"\n      }\n    ],\n    \"tradeOrders\": [\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"GARAN\",\n        \"orderSide\": \"BUY\",\n        \"size\": \"<number>\",\n        \"price\": \"<number>\",\n        \"status\": \"CANCELED\",\n        \"createDate\": \"<dateTime>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"customer\": {\n          \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n        },\n        \"assetCode\": \"ING\",\n        \"orderSide\": \"SELL\",\n        \"size\": \"<number>\",\n        \"price\": \"<number>\",\n        \"status\": \"FILLED\",\n        \"createDate\": \"<dateTime>\"\n      }\n    ],\n    \"enabled\": \"<boolean>\"\n  },\n  \"iban\": \"<string>\",\n  \"processed\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "tradeOrders",
+					"item": [
+						{
+							"name": "{tradeOrderId}",
+							"item": [
+								{
+									"name": "Delete Trade Order endpoint",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/tradeOrders/:tradeOrderId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tradeOrders",
+												":tradeOrderId"
+											],
+											"variable": [
+												{
+													"key": "tradeOrderId",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/tradeOrders/:tradeOrderId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tradeOrders",
+														":tradeOrderId"
+													],
+													"variable": [
+														{
+															"key": "tradeOrderId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Listing Trade Orders endpoint",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tradeOrders?customerId=<long>&startDate=<dateTime>&endDate=<dateTime>&page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tradeOrders"
+									],
+									"query": [
+										{
+											"key": "customerId",
+											"value": "<long>",
+											"description": "(Required) "
+										},
+										{
+											"key": "startDate",
+											"value": "<dateTime>",
+											"description": "(Required) "
+										},
+										{
+											"key": "endDate",
+											"value": "<dateTime>",
+											"description": "(Required) "
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tradeOrders?customerId=<long>&startDate=<dateTime>&endDate=<dateTime>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tradeOrders"
+											],
+											"query": [
+												{
+													"key": "customerId",
+													"value": "<long>",
+													"description": "(Required) "
+												},
+												{
+													"key": "startDate",
+													"value": "<dateTime>",
+													"description": "(Required) "
+												},
+												{
+													"key": "endDate",
+													"value": "<dateTime>",
+													"description": "(Required) "
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"customer\": {\n      \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n    },\n    \"assetCode\": \"GARAN\",\n    \"orderSide\": \"SELL\",\n    \"size\": \"<number>\",\n    \"price\": \"<number>\",\n    \"status\": \"FILLED\",\n    \"createDate\": \"<dateTime>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"customer\": {\n      \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n    },\n    \"assetCode\": \"SASA\",\n    \"orderSide\": \"BUY\",\n    \"size\": \"<number>\",\n    \"price\": \"<number>\",\n    \"status\": \"PENDING\",\n    \"createDate\": \"<dateTime>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Create new Trade Order endpoint",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assetCode\": \"ING\",\n  \"customerId\": \"<long>\",\n  \"price\": \"<number>\",\n  \"side\": \"BUY\",\n  \"size\": \"<number>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/tradeOrders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tradeOrders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assetCode\": \"ING\",\n  \"customerId\": \"<long>\",\n  \"price\": \"<number>\",\n  \"side\": \"BUY\",\n  \"size\": \"<number>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tradeOrders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tradeOrders"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"customer\": {\n    \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n  },\n  \"assetCode\": \"GARAN\",\n  \"orderSide\": \"BUY\",\n  \"size\": \"<number>\",\n  \"price\": \"<number>\",\n  \"status\": \"PENDING\",\n  \"createDate\": \"<dateTime>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "tradeMatcher",
+					"item": [
+						{
+							"name": "match",
+							"item": [
+								{
+									"name": "Match All Pending Trade Orders endpoint",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/tradeMatcher/match",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tradeMatcher",
+												"match"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/tradeMatcher/match",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tradeMatcher",
+														"match"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "register",
+							"item": [
+								{
+									"name": "Register New User endpoint",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"register"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"token\": \"<string>\",\n  \"username\": \"<string>\",\n  \"customerId\": \"<long>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "authenticate",
+							"item": [
+								{
+									"name": "Authenticate User endpoint",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/authenticate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"authenticate"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/authenticate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"authenticate"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"token\": \"<string>\",\n  \"username\": \"<string>\",\n  \"customerId\": \"<long>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "assets",
+					"item": [
+						{
+							"name": "Listing Assets endpoint",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/assets?customerId=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"assets"
+									],
+									"query": [
+										{
+											"key": "customerId",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/assets?customerId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"assets"
+											],
+											"query": [
+												{
+													"key": "customerId",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"customer\": {\n      \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n    },\n    \"assetCode\": \"SASA\",\n    \"size\": \"<number>\",\n    \"usableSize\": \"<number>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"customer\": {\n      \"value\": \"<Circular reference to #/components/schemas/Customer detected>\"\n    },\n    \"assetCode\": \"TRY\",\n    \"size\": \"<number>\",\n    \"usableSize\": \"<number>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

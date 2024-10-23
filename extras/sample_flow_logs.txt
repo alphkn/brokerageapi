@@ -1,0 +1,203 @@
+
+Connected to the target VM, address: '127.0.0.1:62092', transport: 'socket'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-24T01:07:32.082+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.BrokerageapiApplication            : Starting BrokerageapiApplication using Java 17.0.6 with PID 17148 (D:\WorkSpaces\inghubs_workspace\brokerageapi\target\classes started by Hakan Alp in D:\WorkSpaces\inghubs_workspace\brokerageapi)
+2024-10-24T01:07:32.085+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.BrokerageapiApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-24T01:07:32.591+03:00  INFO 17148 --- [brokerageapi] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24T01:07:32.644+03:00  INFO 17148 --- [brokerageapi] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 6 JPA repository interfaces.
+2024-10-24T01:07:33.330+03:00  INFO 17148 --- [brokerageapi] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-24T01:07:33.340+03:00  INFO 17148 --- [brokerageapi] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-24T01:07:33.340+03:00  INFO 17148 --- [brokerageapi] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-24T01:07:33.395+03:00  INFO 17148 --- [brokerageapi] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-24T01:07:33.395+03:00  INFO 17148 --- [brokerageapi] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1267 ms
+2024-10-24T01:07:33.425+03:00  INFO 17148 --- [brokerageapi] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-24T01:07:33.585+03:00  INFO 17148 --- [brokerageapi] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:brokeragedb user=SA
+2024-10-24T01:07:33.586+03:00  INFO 17148 --- [brokerageapi] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-24T01:07:33.595+03:00  INFO 17148 --- [brokerageapi] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:brokeragedb'
+2024-10-24T01:07:33.678+03:00  INFO 17148 --- [brokerageapi] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-24T01:07:33.721+03:00  INFO 17148 --- [brokerageapi] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-24T01:07:33.749+03:00  INFO 17148 --- [brokerageapi] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-24T01:07:33.987+03:00  INFO 17148 --- [brokerageapi] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-24T01:07:34.960+03:00  INFO 17148 --- [brokerageapi] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-24T01:07:35.024+03:00  INFO 17148 --- [brokerageapi] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-24T01:07:35.309+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.brokerageapi.config.SecurityConfig   : SecurityConfig initialized with JwtAuthenticationFilter and CustomAuthenticationEntryPoint.
+2024-10-24T01:07:35.311+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.config.ApplicationConfig           : ApplicationConfig initialized with UserDetailsService and PasswordEncoder.
+2024-10-24T01:07:35.314+03:00  INFO 17148 --- [brokerageapi] [           main] c.inghubs.brokerageapi.config.WebConfig  : WebConfig initialized with LoggingInterceptor.
+2024-10-24T01:07:35.414+03:00  INFO 17148 --- [brokerageapi] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-10-24T01:07:35.414+03:00  WARN 17148 --- [brokerageapi] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-10-24T01:07:35.420+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.controller.AssetController         : AssetController initialized with AssetService and AuthenticationService.
+2024-10-24T01:07:35.425+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.c.AuthenticationController         : AuthenticationController initialized with AuthenticationService.
+2024-10-24T01:07:35.465+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.c.TradeMatchingController          : TradeMatchingController initialized with TradeMatchingService.
+2024-10-24T01:07:35.474+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.controller.TradeOrderController    : TradeOrderController initialized with TradeOrderService and AuthenticationService.
+2024-10-24T01:07:35.505+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.controller.TransactionController   : TransactionController initialized with TransactionService and AuthenticationService.
+2024-10-24T01:07:35.615+03:00  WARN 17148 --- [brokerageapi] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-24T01:07:35.938+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.config.SwaggerDocumentationConfig  : Swagger documentation configured for Brokerage API with version 4.0.0.
+2024-10-24T01:07:36.255+03:00  INFO 17148 --- [brokerageapi] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-24T01:07:36.265+03:00  INFO 17148 --- [brokerageapi] [           main] c.i.b.BrokerageapiApplication            : Started BrokerageapiApplication in 4.521 seconds (process running for 5.105)
+2024-10-24T01:07:43.833+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-24T01:07:43.833+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-24T01:07:43.834+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-24T01:07:43.863+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/auth/register
+2024-10-24T01:07:43.945+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.service.AuthenticationService      : Registering new user with username: admin
+2024-10-24T01:07:44.231+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.service.AuthenticationService      : User registered successfully. JWT generated.
+2024-10-24T01:07:44.247+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.c.AuthenticationController         : User registered successfully: admin
+2024-10-24T01:07:44.270+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:07:44.372+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/auth/authenticate
+2024-10-24T01:07:44.374+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.service.AuthenticationService      : Authenticating user with username: admin
+2024-10-24T01:07:44.535+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: admin
+2024-10-24T01:07:44.694+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.service.AuthenticationService      : User authenticated successfully. JWT generated.
+2024-10-24T01:07:44.695+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.c.AuthenticationController         : User authenticated successfully: admin
+2024-10-24T01:07:44.697+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:07:44.805+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: admin
+2024-10-24T01:07:44.833+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/transactions
+2024-10-24T01:07:44.881+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TransactionService         : Checking transaction for customer ID: 2
+2024-10-24T01:07:44.882+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.CustomerService            : Fetching customer with ID: 2
+2024-10-24T01:07:44.886+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TransactionService         : Saving transaction: Transaction{id=null, customerId=2, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:07:44.847923800, processed=false}
+2024-10-24T01:07:44.893+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.brokerageapi.service.AssetService    : Processing transaction: Transaction{id=1, customerId=2, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:07:44.847923800, processed=false}
+2024-10-24T01:07:44.893+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.brokerageapi.service.AssetService    : Assigning 10000.0 of asset TRY to customer ID: 2
+2024-10-24T01:07:44.898+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.CustomerService            : Fetching customer with ID: 2
+2024-10-24T01:07:44.899+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.brokerageapi.service.AssetService    : Creating new asset for customer ID: 2 with asset code: TRY
+2024-10-24T01:07:44.902+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TransactionService         : Transaction processed successfully: Transaction{id=1, customerId=2, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:07:44.847923800, processed=true}
+2024-10-24T01:07:44.902+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TransactionService         : Transaction saved: Transaction{id=1, customerId=2, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:07:44.847923800, processed=true}
+2024-10-24T01:07:44.904+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.controller.TransactionController   : Transaction processed successfully: Transaction{id=1, customerId=2, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:07:44.847923800, processed=true}
+2024-10-24T01:07:44.920+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 201
+2024-10-24T01:07:44.998+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: admin
+2024-10-24T01:07:45.006+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.interceptor.LoggingInterceptor     : Incoming request: GET /api/transactions
+2024-10-24T01:07:45.011+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.service.TransactionService         : Listing transactions for customer ID: 2
+2024-10-24T01:07:45.014+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.service.TransactionService         : Found 1 transactions for customer ID: 2
+2024-10-24T01:07:45.015+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.controller.TransactionController   : Listed 1 transactions for customer ID: 2
+2024-10-24T01:07:45.018+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:07:45.076+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: admin
+2024-10-24T01:07:45.084+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.interceptor.LoggingInterceptor     : Incoming request: GET /api/assets
+2024-10-24T01:07:45.090+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.brokerageapi.service.AssetService    : Listing assets for customer with ID: 2
+2024-10-24T01:07:45.093+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.controller.AssetController         : Assets listed successfully for customer ID: 2
+2024-10-24T01:07:45.095+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:07:45.154+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: admin
+2024-10-24T01:07:45.160+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/tradeOrders
+2024-10-24T01:07:45.170+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.service.TradeOrderService          : Creating trade order: Customer ID = 2, Asset Code = GARAN, Side = BUY, Size = 10, Price = 25
+2024-10-24T01:07:45.170+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.service.CustomerService            : Fetching customer with ID: 2
+2024-10-24T01:07:45.170+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.brokerageapi.service.AssetService    : Checking and locking 250 of asset TRY for customer ID: 2
+2024-10-24T01:07:45.173+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.service.TradeOrderService          : Locked TRY for Customer ID 2: Amount = 250
+2024-10-24T01:07:45.174+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.service.TradeOrderService          : Trade order created successfully: TradeOrder{id=4, assetCode=GARAN, orderSide=BUY, size=10, price=25, status=PENDING, createDate=2024-10-24T01:07:45.173784200}
+2024-10-24T01:07:45.179+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.controller.TradeOrderController    : Trade order created successfully: TradeOrder{id=4, assetCode=GARAN, orderSide=BUY, size=10, price=25, status=PENDING, createDate=2024-10-24T01:07:45.173784200}
+2024-10-24T01:07:45.182+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-7] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 201
+2024-10-24T01:07:45.278+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: admin
+2024-10-24T01:07:45.285+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/tradeMatcher/match
+2024-10-24T01:07:45.287+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.c.TradeMatchingController          : Matching all pending trade orders...
+2024-10-24T01:07:45.289+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Matching orders for asset code: SASA
+2024-10-24T01:07:45.315+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Found 0 buy orders and 1 sell orders for asset code: SASA
+2024-10-24T01:07:45.315+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Completed matching orders for asset code: SASA
+2024-10-24T01:07:45.316+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Matching orders for asset code: GARAN
+2024-10-24T01:07:45.324+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Found 1 buy orders and 1 sell orders for asset code: GARAN
+2024-10-24T01:07:45.325+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Matching buy order ID 4 with sell order ID 1
+2024-10-24T01:07:45.326+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Trade created: 10.00 GARAN at price 20.00
+2024-10-24T01:07:45.327+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Order ID 4 has been filled.
+2024-10-24T01:07:45.327+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Order ID 1 is partially filled. Remaining size: 9990.00
+2024-10-24T01:07:45.327+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Releasing 250.0000 of asset TRY for customer ID: 2
+2024-10-24T01:07:45.330+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Withdrawing 200.0000 of asset TRY from customer ID: 2
+2024-10-24T01:07:45.334+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Releasing 10.00 of asset GARAN for customer ID: 1
+2024-10-24T01:07:45.338+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Withdrawing 10.00 of asset GARAN from customer ID: 1
+2024-10-24T01:07:45.342+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Assigning 10.00 of asset GARAN to customer ID: 2
+2024-10-24T01:07:45.345+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.CustomerService            : Fetching customer with ID: 2
+2024-10-24T01:07:45.345+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Creating new asset for customer ID: 2 with asset code: GARAN
+2024-10-24T01:07:45.346+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.brokerageapi.service.AssetService    : Assigning 200.0000 of asset TRY to customer ID: 1
+2024-10-24T01:07:45.349+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Trade executed: 10.00 GARAN at price 20.00 between buyer ID 2 and seller ID 1
+2024-10-24T01:07:45.349+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Buy order ID 4 fully executed.
+2024-10-24T01:07:45.349+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Completed matching orders for asset code: GARAN
+2024-10-24T01:07:45.351+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Matching orders for asset code: ING
+2024-10-24T01:07:45.357+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Found 0 buy orders and 1 sell orders for asset code: ING
+2024-10-24T01:07:45.357+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.TradeMatchingService       : Completed matching orders for asset code: ING
+2024-10-24T01:07:45.358+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.c.TradeMatchingController          : All pending trade orders matched successfully.
+2024-10-24T01:07:45.359+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:09.082+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/auth/register
+2024-10-24T01:08:09.083+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.service.AuthenticationService      : Registering new user with username: cust
+2024-10-24T01:08:09.165+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.service.AuthenticationService      : User registered successfully. JWT generated.
+2024-10-24T01:08:09.166+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.c.AuthenticationController         : User registered successfully: cust
+2024-10-24T01:08:09.168+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:09.252+03:00  INFO 17148 --- [brokerageapi] [io-8080-exec-10] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/auth/authenticate
+2024-10-24T01:08:09.253+03:00  INFO 17148 --- [brokerageapi] [io-8080-exec-10] c.i.b.service.AuthenticationService      : Authenticating user with username: cust
+2024-10-24T01:08:09.253+03:00  INFO 17148 --- [brokerageapi] [io-8080-exec-10] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust
+2024-10-24T01:08:09.345+03:00  INFO 17148 --- [brokerageapi] [io-8080-exec-10] c.i.b.service.AuthenticationService      : User authenticated successfully. JWT generated.
+2024-10-24T01:08:09.346+03:00  INFO 17148 --- [brokerageapi] [io-8080-exec-10] c.i.b.c.AuthenticationController         : User authenticated successfully: cust
+2024-10-24T01:08:09.346+03:00  INFO 17148 --- [brokerageapi] [io-8080-exec-10] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:09.429+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust
+2024-10-24T01:08:09.436+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/transactions
+2024-10-24T01:08:09.439+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.TransactionService         : Checking transaction for customer ID: 3
+2024-10-24T01:08:09.440+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.CustomerService            : Fetching customer with ID: 3
+2024-10-24T01:08:09.440+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.TransactionService         : Saving transaction: Transaction{id=null, customerId=3, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:08:09.436802300, processed=false}
+2024-10-24T01:08:09.442+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.brokerageapi.service.AssetService    : Processing transaction: Transaction{id=2, customerId=3, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:08:09.436802300, processed=false}
+2024-10-24T01:08:09.442+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.brokerageapi.service.AssetService    : Assigning 10000.0 of asset TRY to customer ID: 3
+2024-10-24T01:08:09.445+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.CustomerService            : Fetching customer with ID: 3
+2024-10-24T01:08:09.446+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.brokerageapi.service.AssetService    : Creating new asset for customer ID: 3 with asset code: TRY
+2024-10-24T01:08:09.447+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.TransactionService         : Transaction processed successfully: Transaction{id=2, customerId=3, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:08:09.436802300, processed=true}
+2024-10-24T01:08:09.447+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.TransactionService         : Transaction saved: Transaction{id=2, customerId=3, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:08:09.436802300, processed=true}
+2024-10-24T01:08:09.451+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.controller.TransactionController   : Transaction processed successfully: Transaction{id=2, customerId=3, type=DEPOSIT, amount=10000.0, iban='ES9121000418450200051332', timestamp=2024-10-24T01:08:09.436802300, processed=true}
+2024-10-24T01:08:09.453+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 201
+2024-10-24T01:08:09.551+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust
+2024-10-24T01:08:09.559+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.interceptor.LoggingInterceptor     : Incoming request: GET /api/transactions
+2024-10-24T01:08:09.562+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.service.TransactionService         : Listing transactions for customer ID: 3
+2024-10-24T01:08:09.565+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.service.TransactionService         : Found 1 transactions for customer ID: 3
+2024-10-24T01:08:09.566+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.controller.TransactionController   : Listed 1 transactions for customer ID: 3
+2024-10-24T01:08:09.568+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-1] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:09.631+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust
+2024-10-24T01:08:09.635+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.interceptor.LoggingInterceptor     : Incoming request: GET /api/assets
+2024-10-24T01:08:09.638+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.brokerageapi.service.AssetService    : Listing assets for customer with ID: 3
+2024-10-24T01:08:09.640+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.controller.AssetController         : Assets listed successfully for customer ID: 3
+2024-10-24T01:08:09.641+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:09.739+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust
+2024-10-24T01:08:09.743+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/tradeOrders
+2024-10-24T01:08:09.747+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TradeOrderService          : Creating trade order: Customer ID = 3, Asset Code = GARAN, Side = BUY, Size = 10, Price = 25
+2024-10-24T01:08:09.747+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.CustomerService            : Fetching customer with ID: 3
+2024-10-24T01:08:09.747+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.brokerageapi.service.AssetService    : Checking and locking 250 of asset TRY for customer ID: 3
+2024-10-24T01:08:09.750+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TradeOrderService          : Locked TRY for Customer ID 3: Amount = 250
+2024-10-24T01:08:09.751+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.service.TradeOrderService          : Trade order created successfully: TradeOrder{id=5, assetCode=GARAN, orderSide=BUY, size=10, price=25, status=PENDING, createDate=2024-10-24T01:08:09.750018400}
+2024-10-24T01:08:09.753+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.controller.TradeOrderController    : Trade order created successfully: TradeOrder{id=5, assetCode=GARAN, orderSide=BUY, size=10, price=25, status=PENDING, createDate=2024-10-24T01:08:09.750018400}
+2024-10-24T01:08:09.754+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-4] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 201
+2024-10-24T01:08:09.815+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust
+2024-10-24T01:08:09.821+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/tradeMatcher/match
+2024-10-24T01:08:09.823+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.exception.GlobalExceptionHandler   : Internal server error: Access Denied
+2024-10-24T01:08:09.825+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 500
+2024-10-24T01:08:41.180+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/auth/register
+2024-10-24T01:08:41.181+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.service.AuthenticationService      : Registering new user with username: cust2
+2024-10-24T01:08:41.273+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.service.AuthenticationService      : User registered successfully. JWT generated.
+2024-10-24T01:08:41.274+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.c.AuthenticationController         : User registered successfully: cust2
+2024-10-24T01:08:41.275+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:41.349+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/auth/authenticate
+2024-10-24T01:08:41.350+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.AuthenticationService      : Authenticating user with username: cust2
+2024-10-24T01:08:41.350+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust2
+2024-10-24T01:08:41.450+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.service.AuthenticationService      : User authenticated successfully. JWT generated.
+2024-10-24T01:08:41.450+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.c.AuthenticationController         : User authenticated successfully: cust2
+2024-10-24T01:08:41.452+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-8] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 200
+2024-10-24T01:08:41.535+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust2
+2024-10-24T01:08:41.540+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/transactions
+2024-10-24T01:08:41.543+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.service.AuthenticationService      : Unauthorized access attempt by user: cust2 for customer ID: 2
+2024-10-24T01:08:41.544+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.exception.GlobalExceptionHandler   : Internal server error: You do not have permission to access this customer's transactions.
+2024-10-24T01:08:41.545+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-9] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 500
+2024-10-24T01:08:41.614+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust2
+2024-10-24T01:08:41.619+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.interceptor.LoggingInterceptor     : Incoming request: GET /api/transactions
+2024-10-24T01:08:41.621+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.service.AuthenticationService      : Unauthorized access attempt by user: cust2 for customer ID: 2
+2024-10-24T01:08:41.621+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.exception.GlobalExceptionHandler   : Internal server error: You do not have permission to access this customer's transactions.
+2024-10-24T01:08:41.622+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-2] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 500
+2024-10-24T01:08:41.705+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust2
+2024-10-24T01:08:41.711+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.interceptor.LoggingInterceptor     : Incoming request: GET /api/assets
+2024-10-24T01:08:41.714+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.service.AuthenticationService      : Unauthorized access attempt by user: cust2 for customer ID: 2
+2024-10-24T01:08:41.715+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.exception.GlobalExceptionHandler   : Internal server error: You do not have permission to access this customer's transactions.
+2024-10-24T01:08:41.716+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-3] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 500
+2024-10-24T01:08:41.767+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust2
+2024-10-24T01:08:41.771+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/tradeOrders
+2024-10-24T01:08:41.774+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.service.AuthenticationService      : Unauthorized access attempt by user: cust2 for customer ID: 2
+2024-10-24T01:08:41.774+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.exception.GlobalExceptionHandler   : Internal server error: You do not have permission to access this customer's transactions.
+2024-10-24T01:08:41.776+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-5] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 500
+2024-10-24T01:08:41.845+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.service.CustomUserDetailsService   : Attempting to load user with username: cust2
+2024-10-24T01:08:41.850+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.interceptor.LoggingInterceptor     : Incoming request: POST /api/tradeMatcher/match
+2024-10-24T01:08:41.851+03:00 ERROR 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.exception.GlobalExceptionHandler   : Internal server error: Access Denied
+2024-10-24T01:08:41.851+03:00  INFO 17148 --- [brokerageapi] [nio-8080-exec-6] c.i.b.interceptor.LoggingInterceptor     : Outgoing response: status 500
