@@ -1,0 +1,26 @@
+name: COMPOSITE_ACTION_CALLER
+
+env: 
+  GH_ACTION_PAT: willbeplacedhere
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: self-hosted
+    name: COMPOSITE_ACTION_CALLER
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get composite run steps repository
+        run: |
+          git clone https://$GH_ACTION_PAT@github.com/org4k8s/gh-workflows.git ./composite_action
+        shell: bash
+      - name: chmode command to run 
+        run: chmod -R 777 .  
+      - name: Run action from private repo
+        uses: ./composite_action/java_ms
