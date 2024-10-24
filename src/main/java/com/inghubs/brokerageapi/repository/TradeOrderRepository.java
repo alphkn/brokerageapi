@@ -8,10 +8,12 @@ import com.inghubs.brokerageapi.constant.AssetCodes;
 import com.inghubs.brokerageapi.constant.OrderSide;
 import com.inghubs.brokerageapi.constant.OrderStatus;
 import com.inghubs.brokerageapi.entity.TradeOrder;
+import jakarta.persistence.LockModeType;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.jpa.repository.Lock;
+import org.springframework.data.jpa.repository.Query;
 
 
 /**
@@ -59,4 +61,16 @@ public interface TradeOrderRepository extends JpaRepository<TradeOrder, Long> {
      * @return a list of TradeOrders matching the specified criteria
      */
     List<TradeOrder> findByAssetCodeAndOrderSideAndStatusIn(AssetCodes assetCode, OrderSide orderSide, List<OrderStatus> statuses, Sort sort);
+
+    /**
+     * Retrieves a TradeOrder by its ID using a pessimistic write lock.
+     * This ensures that no other transaction can update or delete the same TradeOrder
+     * until the current transaction completes, preventing data inconsistencies.
+     *
+     * @param id The ID of the TradeOrder to be retrieved.
+     * @return The TradeOrder entity locked for writing.
+     */
+    @Lock(LockModeType.PESSIMISTIC_WRITE) // Ensures exclusive access to the TradeOrder record.
+    @Query("SELECT o FROM TradeOrder o WHERE o.id = :id")
+    TradeOrder findByIdWithLock(Long id);
 }

@@ -66,10 +66,7 @@ public class TradeMatchingService {
                 if (canMatch(buyOrder, sellOrder)) {
                     log.info("Matching buy order ID {} with sell order ID {}", buyOrder.getId(), sellOrder.getId());
                     
-                    // Lock orders before processing to avoid race conditions
-                    tradeOrderRepository.lockById(buyOrder.getId());
-                    tradeOrderRepository.lockById(sellOrder.getId());
-                    
+
                     executeTrade(buyOrder, sellOrder);
 
                     // Remove fully executed sell order
@@ -111,29 +108,32 @@ public class TradeMatchingService {
      */
     private void executeTrade(TradeOrder buyOrder, TradeOrder sellOrder) {
         // Calculate execution size and price
-        BigDecimal executionSize = buyOrder.getSize().min(sellOrder.getSize());
-        BigDecimal executionPrice = sellOrder.getPrice();
+        TradeOrder lockedBuyOrder = tradeOrderRepository.findByIdWithLock(buyOrder.getId());
+        TradeOrder lockedSellOrder = tradeOrderRepository.findByIdWithLock(sellOrder.getId());
+
+        BigDecimal executionSize = lockedBuyOrder.getSize().min(lockedSellOrder.getSize());
+        BigDecimal executionPrice = lockedSellOrder.getPrice();
         BigDecimal tradeTotalAmount = executionPrice.multiply(executionSize);
-        BigDecimal predictedTotalAmount = executionSize.multiply(buyOrder.getPrice());
+        BigDecimal predictedTotalAmount = executionSize.multiply(lockedBuyOrder.getPrice());
 
         // Create and save trade
         Trade trade = new Trade();
-        trade.setBuyOrder(buyOrder);
-        trade.setSellerOrder(sellOrder);
+        trade.setBuyOrder(lockedBuyOrder);
+        trade.setSellerOrder(lockedSellOrder);
         trade.setExecutedPrice(executionPrice);
         trade.setExecutedSize(executionSize);
         tradeRepository.save(trade);
 
-        log.info("Trade created: {} {} at price {}", executionSize, buyOrder.getAssetCode(), executionPrice);
+        log.info("Trade created: {} {} at price {}", executionSize, lockedBuyOrder.getAssetCode(), executionPrice);
 
         // Update orders
-        updateOrderStatus(buyOrder, executionSize);
-        updateOrderStatus(sellOrder, executionSize);
+        updateOrderStatus(lockedBuyOrder, executionSize);
+        updateOrderStatus(lockedSellOrder, executionSize);
 
         // Transfer assets between customers
-        Long buyerId = buyOrder.getCustomer().getId();
-        Long sellerId = sellOrder.getCustomer().getId();
-        AssetCodes assetCode = buyOrder.getAssetCode();
+        Long buyerId = lockedBuyOrder.getCustomer().getId();
+        Long sellerId = lockedSellOrder.getCustomer().getId();
+        AssetCodes assetCode = lockedBuyOrder.getAssetCode();
 
         // Release and withdraw assets
         assetService.releaseAsset(buyerId, AssetCodes.TRY, predictedTotalAmount);
@@ -144,8 +144,8 @@ public class TradeMatchingService {
         assetService.assignAsset(sellerId, AssetCodes.TRY, tradeTotalAmount);
 
         // Save updated orders
-        tradeOrderRepository.save(buyOrder);
-        tradeOrderRepository.save(sellOrder);
+        tradeOrderRepository.save(lockedBuyOrder);
+        tradeOrderRepository.save(lockedSellOrder);
 
         log.info("Trade executed: {} {} at price {} between buyer ID {} and seller ID {}", executionSize, assetCode, executionPrice, buyerId, sellerId);
     }
