@@ -65,6 +65,11 @@ public class TradeMatchingService {
                 // Check if orders can be matched
                 if (canMatch(buyOrder, sellOrder)) {
                     log.info("Matching buy order ID {} with sell order ID {}", buyOrder.getId(), sellOrder.getId());
+                    
+                    // Lock orders before processing to avoid race conditions
+                    tradeOrderRepository.lockById(buyOrder.getId());
+                    tradeOrderRepository.lockById(sellOrder.getId());
+                    
                     executeTrade(buyOrder, sellOrder);
 
                     // Remove fully executed sell order
